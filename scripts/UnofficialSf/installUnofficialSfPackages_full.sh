@@ -1,8 +1,6 @@
 # Start script in terminal
 # $ ./scripts/UnofficialSf/installUnofficialSfPackages.sh
 
-
-
 set -e
 #Говорит bash немедленно завершить выполнение скрипта, если любая команда возвращает ненулевой код ошибки.
 # В терминале каждая команда возвращает exit code:
@@ -13,7 +11,7 @@ set -e
 DEVHUB_ALIAS="DevHub_Dev" # алиас вашего Dev Hub
 SCRATCH_ALIAS="ScratchOrg_Scr" # алиас, который даст новому scratch org 
 SCRATCH_DEF="config/project-scratch-def.json" # путь к definition-файлу
-DURATION_DAYS=7 # сколько дней живёт scratch org
+DURATION_DAYS=30 # сколько дней живёт scratch org
 
 # Здесь перечислите все нужные package version IDs (04t...).
 # Пример: PACKAGES=("04t3X0000045abcQAA" "04t3X0000045defQAA" ...)
@@ -56,7 +54,7 @@ for i in "${!PACKAGES[@]}"; do
         CMD="${CMD} --installation-key ${KEY}" 
     fi 
     echo "Installing package ${PKG} ..." 
-    ${CMD} 
+    eval ${CMD} 
 done
 
 # for i in "${!PACKAGES[@]}"; do 
