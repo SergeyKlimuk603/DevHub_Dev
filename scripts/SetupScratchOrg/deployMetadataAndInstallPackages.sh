@@ -5,24 +5,24 @@
 # sf org login devhub --set-default --alias DevHub_Dev
 
 # Для запуска скрипта нужно в терминале находясь в корне проекта выполнить следующую команду:
-# $ ./scripts/CreateScratchOrg/createScratchWithUsfPackages.sh
+# $ ./scripts/CreateScratchOrg/deployMetadataAndInstallPackages.sh
 
 # Сам файл при этом должен быть исполняемым, для этого нужно один раз выполнить команду: 
-# chmod +x ./scripts/CreateScratchOrg/createScratchWithUsfPackages.sh
+# chmod +x ./scripts/CreateScratchOrg/deployMetadataAndInstallPackages.sh
 
 # Если возникают ошибки при выполнении скрипта, возможной причиной может быть неправильная кодировка скрипта,
 # (такое бывет при использовании разных ОС или редакторов). В этом случае нужно перекодировать файл в UTF-8 без BOM.
 # В Linux это можно сделать с помощью команды: 
-# sed -i.bak 's/\r$//' ./scripts/CreateScratchOrg/createScratchWithUsfPackages.sh
+# sed -i.bak 's/\r$//' ./scripts/CreateScratchOrg/deployMetadataAndInstallPackages.sh
 # источник: https://askubuntu.com/questions/803162/how-to-change-windows-line-ending-to-unix-version#:~:text=Option%202%3A,txt.bak.
+
+# После создания scratch org пароль пользователя можно сгенерировать командой:
+# sf org generate password --target-org ScratchOrg_Scr
 
 set -e
 
 # --- Настройки ---
-DEVHUB_ALIAS="DevHub_Dev"
 SCRATCH_ALIAS="ScratchOrg_Scr"
-SCRATCH_DEF="config/project-scratch-def.json"
-DURATION_DAYS=30
 
 # Пакеты - введите реальные 04t… version IDs
 PACKAGES=(
@@ -35,10 +35,6 @@ PACKAGE_KEYS=(
     ""
     ""
 )
-
-# --- Скрипт ---
-echo "Создаем scratch org..."
-sf org create scratch --definition-file ${SCRATCH_DEF} --target-dev-hub ${DEVHUB_ALIAS} --alias ${SCRATCH_ALIAS} --duration-days ${DURATION_DAYS} --set-default #
 
 echo "Запушим локальный исходный код (если есть)..."
 sf project deploy start --target-org ${SCRATCH_ALIAS}
@@ -54,6 +50,3 @@ for i in "${!PACKAGES[@]}"; do
   echo "Installing package ${PKG} ..."
   eval ${CMD}
 done
-
-echo "Все пакеты установлены. Открываем scratch org..."
-sf org open --target-org ${SCRATCH_ALIAS}
