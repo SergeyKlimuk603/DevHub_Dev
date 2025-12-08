@@ -5,21 +5,27 @@
 # sf org login devhub --set-default --alias DevHub_Dev
 
 # Для запуска скрипта нужно в терминале находясь в корне проекта выполнить следующую команду:
-# $ ./scripts/CreateScratchOrg/createScratchWithPackages.sh
+# $ ./scripts/SetupScratchOrg/createScratchWithPackages.sh
 
 # Сам файл при этом должен быть исполняемым, для этого нужно один раз выполнить команду: 
-# chmod +x ./scripts/CreateScratchOrg/createScratchWithPackages.sh
+# chmod +x ./scripts/SetupScratchOrg/createScratchWithPackages.sh
 
 # Если возникают ошибки при выполнении скрипта, возможной причиной может быть неправильная кодировка скрипта,
 # (такое бывет при использовании разных ОС или редакторов). В этом случае нужно перекодировать файл в UTF-8 без BOM.
 # В Linux это можно сделать с помощью команды: 
-# sed -i.bak 's/\r$//' ./scripts/CreateScratchOrg/createScratchWithPackages.sh
+# sed -i.bak 's/\r$//' ./scripts/SetupScratchOrg/createScratchWithPackages.sh
 # источник: https://askubuntu.com/questions/803162/how-to-change-windows-line-ending-to-unix-version#:~:text=Option%202%3A,txt.bak.
 
 # После создания scratch org пароль пользователя можно сгенерировать командой:
 # sf org generate password --target-org ScratchOrg_Scr
 
 set -e
+#Говорит bash немедленно завершить выполнение скрипта, если любая команда возвращает ненулевой код ошибки.
+# В терминале каждая команда возвращает exit code:
+#   0 — команда выполнилась успешно
+#   любое другое число — произошла ошибка
+# Без set -e скрипт продолжит выполняться, даже если какая-то команда упала, что может привести к непредсказуемым последствиям.
+
 
 # --- Настройки ---
 DEVHUB_ALIAS="DevHub_Dev"
