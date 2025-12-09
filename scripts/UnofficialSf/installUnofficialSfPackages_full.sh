@@ -27,6 +27,8 @@ PACKAGES=(
     "04t5G0000043wpcQAA" # FlowAutoNavigate v1
     "04t5G0000043xtAQAQ" # SOQLBuildAndExecute v1.3.8
     "04t5G000004fz9nQAA" # AutoNavigate_Refresh v1.0.0
+    "04t5G000003zgZBQAY" # recordDetail_1 v1.9.1
+    "04tB0000000P0ByIAK" # GetLayoutFields v1.2.4
 )
 
 # (Опционально) если для некоторых пакетов нужен installation key (пароль) # Используйте аналогичный массив KEYs, пустая строка — если пароль не нужен 
