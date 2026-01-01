@@ -7,19 +7,19 @@ List<String> strings = new List<String>{
 };
 
 while(!strings.isEmpty()) {
-    List<String> currentChunk = cutChankFromList(strings, chunkSize);
+    List<String> currentChunk = cutChunkFromList(strings, chunkSize);
     System.debug('Processing chunk: ' + currentChunk);
 }
 
 
-List<String> cutChankFromList(List<String> inputList, Integer chankSize) {
-    List<String> chankList = new List<String>();
+List<String> cutChunkFromList(List<String> inputList, Integer chunkSize) {
+    List<String> chunkList = new List<String>();
 
-    Integer itemsToProcess = Math.min(chankSize, inputList.size());
+    Integer itemsToProcess = Math.min(chunkSize, inputList.size());
     
     for (Integer i = 0; i < itemsToProcess; i++) {
-        chankList.add(inputList.remove(0));
+        chunkList.add(inputList.remove(0));
     }
 
-    return chankList;
+    return chunkList;
 }
