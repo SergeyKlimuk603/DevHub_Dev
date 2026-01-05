@@ -1,0 +1,5 @@
+С помощью этой строки введенной в консоли разработчика браузера можно открыть страницу Visualforce с именем "HelloWorld" в контектсе Lightning Experience:
+
+$A.get("e.force:navigateToURL").setParams({"url": "/apex/HelloWorld"}).fire();
+
+Source: https://trailhead.salesforce.com/content/learn/modules/visualforce_fundamentals/visualforce_creating_pages#:~:text=%7C%20Save.-,To%20see%20your%20new%20page%2C%20click%20Preview.%20The%20rendered%20page%20opens,%3A%20%22/apex/pageName%22%7D).fire()%3B,-In%20the%20editor
