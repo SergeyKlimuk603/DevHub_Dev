@@ -1,0 +1,9 @@
+<apex:page controller="DocumentController" renderAs="pdf">
+  <c:Header headerValue="Some Header"/>
+  <br/>
+  <c:Header headerValue="{!boddy}"/>
+  <br/>
+  <br/>
+  
+  Document body: {!boddy}
+</apex:page>
