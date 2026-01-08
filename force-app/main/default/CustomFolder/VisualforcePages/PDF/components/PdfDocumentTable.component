@@ -1,0 +1,37 @@
+<apex:component controller="PdfDocumentTableController">
+  <apex:attribute 
+        name="accountId" 
+        description="Account Id to fetch contacts."
+        type="String"
+        required="required"
+        assignTo="{!mainRecordId}"
+    />
+
+
+    <table border="1" title="Account's Contacts" style="width:100%; border-collapse:collapse;">
+        <caption style="text-align: left;">Account's Contacts</caption>
+          <thead>
+              <tr>
+                  <th>FirstName</th>
+                  <th>LastName</th>
+                  <th>Email</th>
+              </tr>
+          </thead>
+          <tbody>
+            <apex:repeat value="{!relatedContacts}" var="contact">
+              <tr>
+                  <td>{!contact.FirstName}</td>
+                  <td>{!contact.LastName}</td>
+                  <td>{!contact.Email}</td>
+              </tr>
+            </apex:repeat>
+          </tbody>
+      </table>
+
+      <br/>
+      accountId: {!accountId}
+      <br/>
+      mainRecordId: {!mainRecordId}
+      <br/>
+      apexParam: {!apexParam}
+</apex:component>

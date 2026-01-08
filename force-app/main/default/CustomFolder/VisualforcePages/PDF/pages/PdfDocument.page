@@ -1,0 +1,53 @@
+<apex:page 
+        renderAs="pdf"
+        showHeader="false"
+        sidebar="false"
+        applyHtmlTag="false"
+        applyBodyTag="false">
+    <head>
+        <style>
+            <c:PdfDocumentStyle/>
+        </style>
+    </head>
+
+    <html>
+        <!-- renderAs="pdf" -->
+        <body>
+            param: {!$CurrentPage.parameters.param}
+            
+            <div class="header">
+                <c:PdfDocumentHeader headerValue="{!$CurrentPage.parameters.headerValue}"/>
+            </div>
+
+            <c:PdfDocumentTable accountId="{!$CurrentPage.parameters.accountId}"/>
+
+            <div class="footer">
+                <c:PdfDocumentFooter footerValue="{!$CurrentPage.parameters.footerValue}"/>
+                
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            <!-- <div class="title">
+                Example PDF-document
+                
+            </div>
+
+            <div class="section">
+                This is a casual text in PDF.
+            </div>
+
+            <div class="section highlight">
+                Russian text: Это пример русского текста в PDF документе.
+            </div> 
+            
+            https://page-computing-8542-dev-ed--c.scratch.vf.force.com/apex/PdfDocument?param=123456&headerValue=Some%20Header%20Value&footerValue=Some%20Footer%20Value&accountId=0044
+            -->
+            
+        </body>
+    </html>
+</apex:page>

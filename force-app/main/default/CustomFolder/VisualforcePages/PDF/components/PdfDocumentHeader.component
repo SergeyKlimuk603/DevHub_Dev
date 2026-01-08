@@ -1,0 +1,9 @@
+<apex:component >
+    <apex:attribute 
+        name="headerValue" 
+        description="Attribute on the headerValue."
+        type="String"
+        required="required"
+    />
+  Document Header: {!headerValue}
+</apex:component>

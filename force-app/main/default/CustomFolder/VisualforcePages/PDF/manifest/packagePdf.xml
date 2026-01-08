@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>DocumentController</members>
+        <members>PdfDocumentEmailSender</members>
+        <members>PdfDocumentGenerator</members>
+        <members>PdfDocumentTableController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>PdfDocumentFooter</members>
+        <members>PdfDocumentHeader</members>
+        <members>PdfDocumentStyle</members>
+        <members>PdfDocumentTable</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>PdfDocument</members>
+        <name>ApexPage</name>
+    </types>
+    <version>65.0</version>
+</Package>

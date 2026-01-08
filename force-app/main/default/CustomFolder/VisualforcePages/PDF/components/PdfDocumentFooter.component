@@ -1,0 +1,9 @@
+<apex:component >
+    <apex:attribute 
+        name="footerValue" 
+        description="Attribute on the footerValue."
+        type="String"
+        required="required"
+    />
+  Document Footer: {!footerValue}
+</apex:component>
