@@ -7,7 +7,7 @@
 >
     <head>
         <style> 
-            <c:PdfDocumentStyle/>
+            <c:PdfDocumentStyle pageSize="Legal"/>
         </style>
     </head>
 

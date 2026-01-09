@@ -1,8 +1,9 @@
 <apex:component>
+    <apex:attribute name="pageSize" type="String" default="Letter" description="PDF page size"/>
     {/* Эта строка нужна, чтобы срабатывали все селекторы. Иначе, без нее первый селектор не будет работать. */}
 
     @page {
-        size: Letter;
+        size: {!pageSize};
         margin: 0 0 0.5in 0;
 
         @bottom-left {
