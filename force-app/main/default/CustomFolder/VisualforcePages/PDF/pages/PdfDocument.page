@@ -3,16 +3,24 @@
         showHeader="false"
         sidebar="false"
         applyHtmlTag="false"
-        applyBodyTag="false">
+        applyBodyTag="false"
+>
     <head>
-        <style>
+        <style> 
             <c:PdfDocumentStyle/>
         </style>
     </head>
 
+    <!-- <head>
+        <c:PdfDocumentStyle/>
+    </head> -->
+
+    <!-- <c:PdfDocumentStyle/> -->
+
     <html>
         <!-- renderAs="pdf" -->
-        <body>
+        <body >
+            <div class="pdf-body">
             param: {!$CurrentPage.parameters.param}
             
             <div class="header">
@@ -25,6 +33,9 @@
                 <c:PdfDocumentFooter footerValue="{!$CurrentPage.parameters.footerValue}"/>
                 
             </div>
+
+            <!-- Page Break for Third Page -->
+    <div style="page-break-before: always;"></div>
             
             
             
@@ -47,7 +58,7 @@
             
             https://page-computing-8542-dev-ed--c.scratch.vf.force.com/apex/PdfDocument?param=123456&headerValue=Some%20Header%20Value&footerValue=Some%20Footer%20Value&accountId=0044
             -->
-            
+            </div>
         </body>
     </html>
 </apex:page>
