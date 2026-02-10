@@ -55,7 +55,6 @@ sfdx-project.json
 .husky/pre-commit
 .vscode/extensions.json
 .vscode/launch.json
-config/project-scratch-def.json
 .vscode/settings.json
 force-app/main/default/aura/.eslintrc.json
 force-app/main/default/lwc/.eslintrc.json

@@ -1,0 +1,17 @@
+{
+  "orgName": "KS Company",
+  "edition": "Developer",
+  "features": [
+    "EnableSetPasswordInApi", 
+    "ServiceCloud", 
+    "LightningServiceConsole"
+  ],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    }
+  }
+}
