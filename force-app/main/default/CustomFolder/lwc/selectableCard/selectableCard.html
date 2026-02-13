@@ -1,0 +1,39 @@
+<template>
+    <div class={cardClass} onclick={handleClick}>
+
+        <!-- Галочка в правом верхнем углу -->
+        <template if:true={selected}>
+            <div class="check-container">
+                <lightning-icon
+                    icon-name="utility:check"
+                    size="x-small"
+                    class="check-icon">
+                </lightning-icon>
+            </div>
+        </template>
+
+        <!-- Badge -->
+        <template if:true={badge}>
+            <div class="badge">{badge}</div>
+        </template>
+
+        <div class="header">
+            <lightning-icon icon-name={iconName} size="medium"></lightning-icon>
+        </div>
+
+        <div class="content">
+            <h3 class="title">{title}</h3>
+            <p class="subtitle">{subtitle}</p>
+
+            <ul class="feature-list">
+                <template for:each={features} for:item="feature">
+                    <li key={feature} class="feature-item">
+                        <lightning-icon icon-name="utility:check" size="xx-small"></lightning-icon>
+                        <span>{feature}</span>
+                    </li>
+                </template>
+            </ul>
+        </div>
+
+    </div>
+</template>

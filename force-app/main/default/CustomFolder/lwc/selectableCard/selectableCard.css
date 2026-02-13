@@ -1,0 +1,108 @@
+.card {
+    position: relative;
+    border: 1px solid #d8dde6;
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+    background: white;
+
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border 0.2s ease;
+}
+
+/* Hover эффект */
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Selected состояние */
+.card.selected {
+    border: 2px solid #0176d3;
+    transform: scale(1.03);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+/* Disabled */
+.card.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Галочка контейнер */
+.check-container {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 28px;
+    height: 28px;
+
+    background-color: #0176d3;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: popIn 0.15s ease-out;
+}
+
+/* Галочка */
+.check-icon {
+    --slds-c-icon-color-foreground-default: white;
+}
+
+/* Badge */
+.badge {
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    background: #2e844a;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Typography */
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #5c5c5c;
+    margin-bottom: 16px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+/* Анимация появления галочки */
+@keyframes popIn {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
