@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <!-- Einstein Bot -->
+    <types>
+        <members>*</members>
+        <name>Bot</name>
+    </types>
+
+    <types>
+        <members>*</members>
+        <name>BotVersion</name>
+    </types>
+
+    <!-- Messaging for Web / Embedded Service -->
+    <types>
+        <members>*</members>
+        <name>EmbeddedServiceConfig</name>
+    </types>
+
+    <!-- Digital Engagement Channels -->
+    <types>
+        <members>*</members>
+        <name>MessagingChannel</name>
+    </types>
+
+<!-- 
+    <types>
+        <members>*</members>
+        <name>MessagingDeployment</name>
+    </types>
+-->
+
+    <!-- Live Agent (если используется) -->
+    <types>
+        <members>*</members>
+        <name>LiveChatButton</name>
+    </types>
+
+    <types>
+        <members>*</members>
+        <name>LiveChatDeployment</name>
+    </types>
+
+    <!-- Omni-Channel -->
+    <types>
+        <members>*</members>
+        <name>ServiceChannel</name>
+    </types>
+
+    <!--  Если бот подключён к Experience Cloud Site, может понадобиться: -->
+    <types>
+        <members>*</members>
+        <name>ExperienceBundle</name>
+    </types>
+
+    <version>61.0</version>
+</Package>

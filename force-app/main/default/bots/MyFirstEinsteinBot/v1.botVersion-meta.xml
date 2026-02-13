@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v1</fullName>
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <botDialogs>
+        <botSteps>
+            <stepIdentifier>87fb5f89-d6e8-41d7-aea4-86cbaf4fbe2c</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Create_new_Case</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Create new Case</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <stepIdentifier>4a8da64a-e191-46d9-bc8d-7e83bd0b8afa</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Check_my_Case_Status</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Check my Case Status</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Hi, I&apos;m MyFirstEinsteinBot, a digital assistant.</message>
+                <messageIdentifier>0d9d8071-ec2b-479d-a962-eed26eaa6d69</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>dd023ac1-d7fb-4ac8-9399-b150385d56c6</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <botNavigation>
+                <botNavigationLinks>
+                    <targetBotDialog>Main_Menu</targetBotDialog>
+                </botNavigationLinks>
+                <type>Redirect</type>
+            </botNavigation>
+            <stepIdentifier>341005a5-4ddb-4d1e-9c6c-bc2d006c92d2</stepIdentifier>
+            <type>Navigation</type>
+        </botSteps>
+        <developerName>Welcome</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Welcome</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botNavigation>
+                <botNavigationLinks>
+                    <label>Create new Case</label>
+                    <targetBotDialog>Create_new_Case</targetBotDialog>
+                </botNavigationLinks>
+                <botNavigationLinks>
+                    <label>Check my Case Status</label>
+                    <targetBotDialog>Check_my_Case_Status</targetBotDialog>
+                </botNavigationLinks>
+                <type>Redirect</type>
+            </botNavigation>
+            <stepIdentifier>7b3dd1e5-fa84-4370-a214-deee7e5b4ee0</stepIdentifier>
+            <type>Navigation</type>
+        </botSteps>
+        <developerName>Main_Menu</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Main Menu</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <conversationSystemMessage>
+                <type>Transfer</type>
+            </conversationSystemMessage>
+            <stepIdentifier>42195320-6749-47ed-b2dd-9172805934bf</stepIdentifier>
+            <type>SystemMessage</type>
+        </botSteps>
+        <developerName>Transfer_To_Agent</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Transfer To Agent</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Thanks for taking the time to chat. To close the conversation, select End Chat.</message>
+                <messageIdentifier>83ebe3d0-b263-47f1-8bc2-4ef4ea0de06c</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>4e2f1d32-cb5c-4632-879d-0c8dd269bcb8</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>2b82f547-d8f3-46a9-b7d9-0005aedc2e91</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>End_Chat</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>End Chat</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Sorry, I didn&apos;t understand that.</message>
+                <messageIdentifier>45cdb30c-d862-45bb-8619-afd6204ed843</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>2ebc6367-9e16-4947-8f19-9aa08a955bbf</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>42523bde-7bd5-49ec-ac8c-97101062c104</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Confused</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Confused</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Unfortunately, there are no agents available at the moment</message>
+                <messageIdentifier>cf6e406f-10d5-497b-b15c-073ab06d0b10</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>1335d4f5-780c-4e1d-a570-4368e6fc5705</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>67be4de9-d521-4f1e-8500-a5c2abcbe7e2</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>No_Agent_Available</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>No Agent</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Unfortunately, a system error occurred. I&apos;ll connect you to an agent who can help.</message>
+                <messageIdentifier>6e14cdca-f26e-451f-a5fb-4a3b4a6c93cf</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>18b683b6-7c07-4ca0-8271-010c9fdf6146</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <conversationSystemMessage>
+                <type>Transfer</type>
+            </conversationSystemMessage>
+            <stepIdentifier>d0573bd1-e440-4ff0-ae16-9c6b776f24db</stepIdentifier>
+            <type>SystemMessage</type>
+        </botSteps>
+        <developerName>Error_Handling</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Error Handler</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <citationsEnabled>false</citationsEnabled>
+    <conversationSystemDialogs>
+        <dialog>Error_Handling</dialog>
+        <type>ErrorHandling</type>
+    </conversationSystemDialogs>
+    <conversationSystemDialogs>
+        <dialog>No_Agent_Available</dialog>
+        <type>TransferFailed</type>
+    </conversationSystemDialogs>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>First_Name</developerName>
+        <label>First Name</label>
+    </conversationVariables>
+    <entryDialog>Welcome</entryDialog>
+    <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+    <intentV3Enabled>true</intentV3Enabled>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <mainMenuDialog>Main_Menu</mainMenuDialog>
+    <nlpProviders>
+        <language>en_US</language>
+        <nlpProviderType>EinsteinAi</nlpProviderType>
+    </nlpProviders>
+    <smallTalkEnabled>false</smallTalkEnabled>
+</BotVersion>
