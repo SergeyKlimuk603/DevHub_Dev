@@ -1,17 +1,30 @@
 {
-  "orgName": "KS Company",
-  "edition": "Developer",
-  "features": [
-    "EnableSetPasswordInApi", 
-    "ServiceCloud", 
-    "LightningServiceConsole"
-  ],
-  "settings": {
-    "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": true
-    },
-    "mobileSettings": {
-      "enableS1EncryptedStoragePref2": false
+    "orgName": "KS Company",
+    "edition": "Developer",
+    "hasSampleData": "false",
+    "features": [
+        "EnableSetPasswordInApi", 
+        "ServiceCloud",
+        "Chatbot",
+        "LightningServiceConsole"
+    ],
+    "settings": {
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        },
+        "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
+        },
+        "liveAgentSettings": {
+            "enableLiveAgent": true
+        },
+        "botSettings": {
+            "enableBots": true
+        },
+        "orgPreferenceSettings": {
+            "s1DesktopEnabled": true,
+            "selfSetPasswordInApi": true,
+            "s1EncryptedStoragePref2": false
+        }
     }
-  }
 }
