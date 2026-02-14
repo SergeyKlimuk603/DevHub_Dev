@@ -7,6 +7,7 @@ export default class AdditionalPackageStep extends LightningElement {
     packageOptions = [
         {
             id: 'fraud_plus',
+            idValue: 'fraud_plus',
             title: 'Fraud Protection Plus',
             subtitle: 'Advanced security monitoring and identity theft protection',
             badge: 'Most Popular',
@@ -21,6 +22,7 @@ export default class AdditionalPackageStep extends LightningElement {
         },
         {
             id: 'purchase_protection',
+            idValue: 'purchase_protection',
             title: 'Purchase Protection',
             subtitle: 'Extended warranty and price protection on purchases',
             iconName: 'utility:lock',
@@ -34,6 +36,7 @@ export default class AdditionalPackageStep extends LightningElement {
         },
         {
             id: 'fraud_plus1',
+            idValue: 'fraud_plus1',
             title: 'Fraud Protection Plus',
             subtitle: 'Advanced security monitoring and identity theft protection',
             badge: 'Most Popular',
@@ -50,6 +53,7 @@ export default class AdditionalPackageStep extends LightningElement {
 
     handleChange(event) {
         this.selectedValues = event.detail.selectedValues;
+        console.log('-----selectedValues: ', JSON.parse(JSON.stringify(this.selectedValues)));
     }
 
     get selectedValuesString() {
