@@ -44,7 +44,7 @@
 }
 
 /* Галочка контейнер */
-.check-container {
+.check-container1 {
     position: absolute;
     top: 12px;
     right: 12px;
@@ -63,7 +63,7 @@
 }
 
 /* Галочка контейнер моя версия*/
-.check-container1 {
+.check-container {
     position: absolute;
     top: 12px;
     right: 12px;

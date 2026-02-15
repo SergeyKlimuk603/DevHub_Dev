@@ -2,9 +2,8 @@
     <div class="card-grid">
         <template for:each={internalItems} for:item="item">
             <c-selectable-card
-                key={item.id}
-                
-                id-value={item.idValue}
+                key={item.cardId}
+                card-id={item.cardId}
                 title={item.title}
                 subtitle={item.subtitle}
                 badge={item.badge}

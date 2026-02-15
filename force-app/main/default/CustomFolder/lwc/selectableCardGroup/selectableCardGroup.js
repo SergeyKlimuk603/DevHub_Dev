@@ -24,36 +24,26 @@ export default class SelectableCardGroup extends LightningElement {
     @api disabled = false;
 
     handleSelect(event) {
-        // const selectedId = event.detail.id;
-        const selectedId = event.detail.idValue;
-        console.log('-----22this.id: ', event.detail.id);
-        console.log('-----selectedId: ', selectedId);
+        const selectedId = event.detail.cardId;
 
         if (this.multiple) {
-            console.log('-----multiple');
             this.internalItems = this.internalItems.map(item => {
-                console.log('-----item.id: ', item.id);
-                console.log('-----item.idValue: ', item.idValue);
-                // if ((item.id + '-128') === selectedId) {
-                if ((item.idValue) === selectedId) {
+                if ((item.cardId) === selectedId) {
                     return { ...item, selected: !item.selected };
                 }
                 return item;
             });
         } else {
             this.internalItems = this.internalItems.map(item => {
-                return { ...item, selected: item.id === selectedId };
+                return { ...item, selected: item.cardId === selectedId };
             });
         }
 
-        console.log('-----event.detail: ', event.detail);
-
-        console.log('-----this.internalItems: ', JSON.parse(JSON.stringify(this.internalItems)));
         this.dispatchEvent(new CustomEvent('change', {
             detail: {
                 selectedValues: this.internalItems
                     .filter(i => i.selected)
-                    .map(i => i.id)
+                    .map(i => i.cardId)
             }
         }));
     }
