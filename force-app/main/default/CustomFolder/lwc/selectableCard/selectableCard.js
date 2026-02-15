@@ -2,7 +2,7 @@ import { LightningElement, api } from 'lwc';
 
 export default class SelectableCard extends LightningElement {
 
-    @api id;
+    // @api id;
     @api idValue;
     @api title;
     @api subtitle;
@@ -32,7 +32,8 @@ export default class SelectableCard extends LightningElement {
     handleClick() {
         if (this.disabled) return;
 
-        console.log('-----this.idValue: ', this.idValue);
+        console.log('-----11this.id: ', this.id);
+        console.log('-----11this.idValue: ', this.idValue);
         this.dispatchEvent(new CustomEvent('select', {
             detail: { id: this.id, idValue: this.idValue }
         }));

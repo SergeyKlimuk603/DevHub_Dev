@@ -1,6 +1,7 @@
 .card {
     position: relative;
-    border: 1px solid #d8dde6;
+    height: 100%;
+    border: 1px solid #E0E3EA;
     border-radius: 16px;
     padding: 20px;
     cursor: pointer;
@@ -13,14 +14,24 @@
 }
 
 /* Hover эффект */
+.card1:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 .card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+.card1.selected:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
 /* Selected состояние */
 .card.selected {
-    border: 2px solid #0176d3;
+    border: 2px solid #7190EF;
     transform: scale(1.03);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
     z-index: 2;
@@ -51,6 +62,18 @@
     animation: popIn 0.15s ease-out;
 }
 
+/* Галочка контейнер моя версия*/
+.check-container1 {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 28px;
+    height: 28px;
+
+    animation: popIn 0.15s ease-out;
+}
+
 /* Галочка */
 .check-icon {
     --slds-c-icon-color-foreground-default: white;
@@ -59,12 +82,12 @@
 /* Badge */
 .badge {
     position: absolute;
-    top: -10px;
-    left: 16px;
-    background: #2e844a;
+    top: -14px;
+    left: 20px;
+    background: #1B963A;
     color: white;
-    padding: 4px 10px;
-    border-radius: 16px;
+    padding: 4px 13px;
+    border-radius: 13px;
     font-size: 12px;
     font-weight: 600;
 }

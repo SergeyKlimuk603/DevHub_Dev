@@ -8,7 +8,7 @@ export default class AdditionalPackageStep extends LightningElement {
         {
             id: 'fraud_plus',
             idValue: 'fraud_plus',
-            title: 'Fraud Protection Plus',
+            title: 'Fraud_Protection_Plus',
             subtitle: 'Advanced security monitoring and identity theft protection',
             badge: 'Most Popular',
             iconName: 'utility:shield',
@@ -23,7 +23,7 @@ export default class AdditionalPackageStep extends LightningElement {
         {
             id: 'purchase_protection',
             idValue: 'purchase_protection',
-            title: 'Purchase Protection',
+            title: 'Purchase_Protection',
             subtitle: 'Extended warranty and price protection on purchases',
             iconName: 'utility:lock',
             features: [
@@ -37,10 +37,10 @@ export default class AdditionalPackageStep extends LightningElement {
         {
             id: 'fraud_plus1',
             idValue: 'fraud_plus1',
-            title: 'Fraud Protection Plus',
+            title: 'Fraud_Protection_Plus1',
             subtitle: 'Advanced security monitoring and identity theft protection',
             badge: 'Most Popular',
-            iconName: 'utility:shield',
+            iconName: 'utility:shopping_bag',
             features: [
                 'Real-time fraud alerts',
                 'Identity theft insurance up to $1M',

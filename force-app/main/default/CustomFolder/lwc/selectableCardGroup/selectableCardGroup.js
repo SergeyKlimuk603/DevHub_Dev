@@ -26,6 +26,7 @@ export default class SelectableCardGroup extends LightningElement {
     handleSelect(event) {
         // const selectedId = event.detail.id;
         const selectedId = event.detail.idValue;
+        console.log('-----22this.id: ', event.detail.id);
         console.log('-----selectedId: ', selectedId);
 
         if (this.multiple) {
